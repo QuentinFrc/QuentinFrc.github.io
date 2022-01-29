@@ -1,0 +1,32 @@
+@import "mixins";
+@import "variables";
+
+body{
+  background: #23344f;
+  color: #ebd938;
+}
+main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.center{
+  text-align: center;
+}
+h1:after{
+  content:'.';
+  animation: load 2s infinite linear;
+
+  @keyframes load {
+    50%{
+      content: '..';
+    }
+    100%{
+      content: '...';
+    }
+  }
+}
+img{
+  border: 1px solid #ebd938;
+}
